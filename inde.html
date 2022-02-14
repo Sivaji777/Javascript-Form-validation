@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+
+    <form onsubmit="return mobile()" >
+      <input type="text" id="first" />
+      <input type="text" id="second"/>
+      <input type="text" id="user"/>
+      <input type="text" id="mail"/>
+
+      <button type="submit">submit</button>
+    </form>
+
+    
+    <script>
+    function mobile() {
+        var x=document.getElementById('first').value
+        if(!x)
+        {
+          console.log('enter first name');
+        }
+        else if(!/^([a-z])+$/.test(x))
+        {
+           console.log('numbers not allowed');
+        }
+        else if(!/^([a-z]{6})+$/.test(x))
+        {
+          console.log('etleast 6 charecter');
+        }
+        var y=document.getElementById('second').value
+        if(!y){
+          console.log('enter last name');
+        }
+        else if(!/^([a-z])+$/.test(y))
+        {
+          console.log('numberis not allowed');
+        }
+        else if(!/^([a-z]{7})+$/.test(y))
+        {
+          console.log('etleast 7 charecter');
+        }
+        var z=document.getElementById('user').value
+        if(!z){
+          console.log('enter username name');
+        }
+        else if(!/^([a-z]{6})+([0-7]{3})+$/.test(z))
+        {
+          console.log('user name not correct');
+        }
+        var m=document.getElementById('mail').value
+        if(!m){
+          console.log('enter mai id');
+        }
+        else if(!/^([a-z]{7})+([0-7]{3})+@gmail.com+$/.test(m))
+        {
+          console.log('mail id not correct');
+        }
+        return false;
+    }
+
+
+    </script>
+  </body>
+</html>
